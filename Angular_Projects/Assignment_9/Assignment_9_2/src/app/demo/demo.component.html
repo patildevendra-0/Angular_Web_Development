@@ -1,0 +1,13 @@
+<h1>Inside the Demo Component</h1>
+
+<input type="number" [(ngModel)] = "Input_Number">
+
+
+<input type="number" [(ngModel)] = "Input_Add_num">
+<input type="number" [(ngModel)] = "Input_Mul_num">
+
+
+
+<h2>Add : {{Input_Number | add:Input_Add_num}}</h2>
+
+<h2>Multiply : {{Input_Number | multiplication:Input_Mul_num}}</h2>
