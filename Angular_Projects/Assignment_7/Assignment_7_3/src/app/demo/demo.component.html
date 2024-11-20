@@ -1,0 +1,13 @@
+<h1>Inside the Demo Component</h1>
+
+<button (click) = "Change_Text()">click</button>
+
+<ng-template #Test1>
+<h2>Marvellous Infosystem</h2>
+</ng-template>
+
+<ng-template #Test2>
+    <h2>Educating For better Tomorrow</h2>
+    </ng-template>
+
+<h2 *ngIf = "bFlag ; then Test1 ;else Test2"></h2>
