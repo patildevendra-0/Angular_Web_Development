@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Assignment_8_3": {
+    "Assignment_8_5": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/assignment-8-3",
+            "outputPath": "dist/assignment-8-5",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Assignment_8_3:build:production"
+              "buildTarget": "Assignment_8_5:build:production"
             },
             "development": {
-              "buildTarget": "Assignment_8_3:build:development"
+              "buildTarget": "Assignment_8_5:build:development"
             }
           },
           "defaultConfiguration": "development"

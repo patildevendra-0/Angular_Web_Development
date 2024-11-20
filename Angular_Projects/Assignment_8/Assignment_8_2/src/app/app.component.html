@@ -1,7 +1,10 @@
+<h1>------------------------------------------------------------</h1>
+<app-child (MyEvent) = "Message_C_P = $event"></app-child>
+<h1>------------------------------------------------------------</h1>
 
 
-<app-demo (MyEvent) = "Message = $event"></app-demo>
-
-<h1>DATA FROM CHILD TO PARENT : {{Message}}</h1>
-
+<h1>------------------------------------------------------------</h1>
+<h1>Inside Parent component</h1>
+<h2>Data From Child : {{Message_C_P}}</h2>
+<h1>------------------------------------------------------------</h1>
 <router-outlet></router-outlet>

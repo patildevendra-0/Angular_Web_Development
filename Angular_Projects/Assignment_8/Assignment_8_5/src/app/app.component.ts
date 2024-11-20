@@ -10,5 +10,5 @@ import { DemoComponent } from './demo/demo.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Assignment_8_4';
+  title = 'Assignment_8_5';
 }

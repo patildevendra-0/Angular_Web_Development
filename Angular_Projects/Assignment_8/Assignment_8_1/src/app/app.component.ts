@@ -12,6 +12,5 @@ export class AppComponent
 {
   title = 'Assignment_8_1';
 
-  public MessageFromParent = "MARVELLOUS INFOSYSTEM";
-
+  public Message_P_To_C = "Marvellous Infosystem";
 }

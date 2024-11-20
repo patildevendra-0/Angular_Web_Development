@@ -8,6 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent 
 {
-    @Input() public Parent_Data:any;
-    
+    @Input() public Data:any;
 }

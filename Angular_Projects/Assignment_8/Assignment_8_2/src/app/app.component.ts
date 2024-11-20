@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DemoComponent } from './demo/demo.component';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,DemoComponent],
+  standalone: true,
+  imports: [RouterOutlet,ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent 
+{
   title = 'Assignment_8_2';
 
-  public Message = " ";
+  public Message_C_P:any;
 }

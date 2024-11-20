@@ -1,7 +1,7 @@
 
-<app-demo [P_Message] = "Message_P_C" (MyEvent) = "Rec_Meesgae=$event"></app-demo>
+<app-child [ParentData] = "C_data" (Event_1) = "InComing_Data = $event" ></app-child>
 
+<h2>Child Data To The Parent : {{InComing_Data}}</h2>
 
-<h2>{{Rec_Meesgae}}</h2>
 
 <router-outlet></router-outlet>

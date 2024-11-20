@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DemoComponent } from './demo/demo.component';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,DemoComponent],
+  standalone: true,
+  imports: [RouterOutlet,ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -12,7 +13,6 @@ export class AppComponent
 {
   title = 'Assignment_8_3';
 
-
-  public Message_P_C = "Hello from parent in child"
-  public Rec_Meesgae = " ";
+  public InComing_Data:any;
+  public C_data = "Hello";
 }
