@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row" style="background-color: black;">
+        <div class="container-fluid">
+            <app-nav-bar-curosel></app-nav-bar-curosel>
+        </div> 
+        <div class="container">
+            <app-curosel></app-curosel>
+        </div>       
+    </div>
+    <div class="row">
+        <div class="container-fluid"  [ngStyle] = "{ 'background-image': 'url(' + backgroundUrl + ')', 'background-size': 'cover', 'background-position': 'center' }">
+        <app-dishcards></app-dishcards>
+        </div>
+    </div>
+</div>

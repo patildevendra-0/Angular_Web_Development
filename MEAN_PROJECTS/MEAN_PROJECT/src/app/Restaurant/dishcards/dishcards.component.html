@@ -1,0 +1,15 @@
+<div class="container py-5">
+    <h2 class="text-center mb-4">Our Dishes</h2>
+    <div class="row g-4">
+      <div class="col-md-3" *ngFor="let dish of dishes">
+        <div class="card">
+          <img [src]="dish.image || 'https://via.placeholder.com/300x200'" class="card-img-top" [alt]="dish.name" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">{{ dish.name }}</h5>
+            <p class="card-text">{{ dish.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

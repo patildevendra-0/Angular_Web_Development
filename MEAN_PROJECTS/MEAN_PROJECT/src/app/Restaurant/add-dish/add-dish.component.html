@@ -1,0 +1,43 @@
+<div class="container-fluid" style="background-color: black;">
+    <div class="container-fluid ">
+        <app-nav-bar-curosel></app-nav-bar-curosel>
+    </div>
+    <div class="container-fluid" [ngStyle] = "{ 'background-image': 'url(' + backgroundUrl + ')', 'background-size': 'cover', 'background-position': 'center' }">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <div class="card shadow-lg border-1">
+                        <h2 class="text-center mb-4" style="color: black;">Add New Dish</h2>
+                        <div class="card-body">
+                            <form [formGroup] = "AddDishForm" (ngSubmit) = "AddDish_Click()">
+                                <div class="mb-3">
+                                    <label for="dishImage" class="form-label">Dish Image</label>
+                                    <input formControlName="dishImage" type="file" class="form-control" id="dishImage" accept="image/*"  (change)="onFileSelected($event)">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dishName" class="form-label">Dish Name</label>
+                                    <input formControlName="dishName" type="text" class="form-control" id="dishName" placeholder="Enter dish name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dishDetails" class="form-label">Dish Details</label>
+                                    <textarea formControlName="dishDetails" class="form-control" id="dishDetails" rows="4"
+                                        placeholder="Enter dish details" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dishPrice" class="form-label">Dish Price</label>
+                                    <input formControlName="dishPrice" type="number" class="form-control" id="dishPrice" placeholder="Enter price"
+                                        required>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">Add Dish</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-thank-you [isVisible_for_other]="isPopupVisible"></app-thank-you>

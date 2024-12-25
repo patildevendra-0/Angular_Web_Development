@@ -1,0 +1,47 @@
+<div class="container-fluid" [ngStyle] = "{ 'background-image': 'url(' + backgroundUrl + ')', 'background-size': 'cover', 'background-position': 'center' }">
+    <div class="row">
+        <app-nav-bar-curosel></app-nav-bar-curosel>
+    </div>
+        <div class="row">
+            <div class="container py-5 col-md-6">
+                <div class="card shadow-lg">
+                    <h2 class="text-center mb-4" style="color: black;">Contact Us</h2>
+
+                    <div class="card-body">
+                        <form [formGroup]="ContactForm" (ngSubmit)="Contact_form_submit()">
+                            <!-- Name Input -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input formControlName="fullName" type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                            </div>
+            
+                            <!-- Email Input -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input formControlName="email" type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                            </div>
+            
+                            <!-- Subject Input -->
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+                            </div>
+            
+                            <!-- Message Textarea -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea formControlName="message" class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                            </div>
+            
+                            <!-- Submit Button -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-custom btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-thank-you [isVisible_for_other]="isPopupVisible"></app-thank-you>
+

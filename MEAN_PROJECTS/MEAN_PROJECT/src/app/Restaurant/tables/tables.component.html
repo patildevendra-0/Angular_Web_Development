@@ -1,0 +1,119 @@
+<div class="row">
+  <app-nav-bar-curosel></app-nav-bar-curosel>
+</div>
+  <div class="container-fluid mt-4">
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h2 class="text-primary">User Table</h2>
+      </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Actions</th> <!-- New column for buttons -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user._id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+            <td>
+              <button class="btn btn-sm btn-warning me-2" (click)="onEdit(user)">
+                <i class="bi bi-pencil-square"></i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="Delete_user(user._id)">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+  
+
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h2 class="text-primary">Dish Table</h2>
+      </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>ID</th>
+            <th>Dish Name</th>
+            <th>Details</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Dish of Dishes">
+            <td>{{ Dish._id }}</td>
+            <td>{{ Dish.name }}</td>
+            <td>{{ Dish.description }}</td>
+            <td>{{ Dish.price }}</td>
+            <td>
+              <button class="btn btn-sm btn-warning me-2" (click)="onEdit(Dish)">
+                <i class="bi bi-pencil-square"></i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="Delete_Dish(Dish._id)">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+  
+
+
+
+
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h2 class="text-primary">Bookings</h2>
+      </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Booking Time</th>
+            <th>Guest Count</th>
+            <th>Table Number</th>
+            <th>Special Request</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings">
+            <td>{{ booking._id }}</td>
+            <td>{{ booking.name }}</td>
+            <td>{{ booking.phone }}</td>
+            <td>{{ booking.bookingTime }}</td>
+            <td>{{ booking.guestcount }}</td>
+            <td>{{ booking.tableNumber }}</td>
+            <td>{{ booking.specialrequest }}</td>
+
+            <td>
+              <button class="btn btn-sm btn-warning me-2" (click)="onEdit(booking)">
+                <i class="bi bi-pencil-square"></i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="Delete_booking(booking._id)">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

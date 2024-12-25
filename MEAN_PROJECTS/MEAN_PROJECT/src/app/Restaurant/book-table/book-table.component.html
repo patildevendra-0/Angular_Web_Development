@@ -1,0 +1,58 @@
+<div class="container-fluid" [ngStyle] = "{ 'background-image': 'url(' + backgroundUrl + ')', 'background-size': 'cover', 'background-position': 'center' }">
+    <div class="row">
+        <app-nav-bar-curosel></app-nav-bar-curosel>
+    </div>
+    <div class="row">
+        <div class="container-fluid py-5 col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h2 class="text-center mb-4" style="color: black;">Book Table</h2>
+
+                    <form [formGroup]="Booktable" (ngSubmit) = "BookTable_Click()">
+                        <!-- Name Input -->
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input formControlName = "fullName" type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+        
+                        <!-- Phone Number Input -->
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input formControlName = "phone" type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="table number" class="form-label">table number</label>
+                            <input formControlName = "tablenumber" type="number" class="form-control" placeholder="Enter your table number" required>
+                        </div>
+        
+                        <!-- Date and Time Input -->
+                        <div class="mb-3">
+                            <label for="bookingTime" class="form-label">Preferred Date & Time</label>
+                            <input formControlName = "bookingTime" type="datetime-local" class="form-control" id="bookingTime" required>
+                        </div>
+        
+                        <!-- Number of Guests -->
+                        <div class="mb-3">
+                            <label for="guestCount" class="form-label">Number of Guests</label>
+                            <input formControlName="guestCount" type="number" class="form-control" id="guestCount" placeholder="Enter number of guests" >
+                        </div>
+        
+                        <!-- Special Requests -->
+                        <div class="mb-3">
+                            <label for="specialRequests" class="form-label">Special Requests</label>
+                            <textarea formControlName="specialRequests" class="form-control" id="specialRequests" rows="4" placeholder="Any special requests?" optional></textarea>
+                        </div>
+        
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-custom btn-primary btn-lg">Book Table</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-thank-you [isVisible_for_other]="isPopupVisible"></app-thank-you>
+

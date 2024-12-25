@@ -1,0 +1,17 @@
+<div class="popup-overlay" *ngIf="isVisible">
+    <div class="popup">
+      <h2>Thank You for Signing Up!</h2>
+      <p>We appreciate your registration.</p>
+      <button (click)="closePopup()">Close</button>
+    </div>
+</div>
+
+
+<div class="popup-overlay" *ngIf="isVisible_for_other">
+    <div class="popup">
+      <h2>Thank You!</h2>
+      <button (click)="closePopup()">Close</button>
+    </div>
+</div>
+  
+  
